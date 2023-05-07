@@ -36,8 +36,12 @@ if __name__ == "__main__":
     test_cases = [[5, 12, 4],
                   [2, 11, 3]]
     
+    fail = False
     for test_case in test_cases:
         if solution(*test_case[:-1]) != test_case[-1]:
             print("FAIL")
+            fail = True
             break
-    print("SUCCESS")
+
+    if not fail:
+        print("SUCCESS")
